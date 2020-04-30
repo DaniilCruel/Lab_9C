@@ -67,16 +67,12 @@ public class CAPTCHA {
 	public CAPTCHA(){
 		image = new BufferedImage(WIDTH,HEIGHT,BufferedImage.TYPE_INT_ARGB);
 		Graphics2D canvas = image.createGraphics();
-		//Rectangle2D.Float r = new Rectangle2D.Float(0, 0, WIDTH, HEIGHT);
-		//canvas.draw(r);
-		//canvas.fill(r);
+
 		AffineTransform at=new AffineTransform();
 		StringBuffer stringb = new StringBuffer("01234");
 		for(int i=0;i<5;i++){
 			at.translate(10+30*i, 10);
 			at.rotate((Math.random()-0.5));
-			//Integer n=randomInt(10);
-			//stringb.setCharAt(i, n.toString().charAt(0));
 			String s=randomStr();
 			stringb.setCharAt(i, s.charAt(0));
 			canvas.drawImage(getImg(s), at,null);
@@ -86,7 +82,6 @@ public class CAPTCHA {
 			canvas.setStroke(new BasicStroke(new Float(randomInt(4)+2), BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER, 10.0f, null, 0.0f));
 			canvas.setColor(randomColor());
 			canvas.drawLine(randomInt(WIDTH),randomInt(HEIGHTs)+10,randomInt(WIDTH),randomInt(HEIGHTs)+10);
-		}
-		string=stringb.toString();
+		}		string=stringb.toString();
 	}
 }

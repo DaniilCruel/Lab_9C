@@ -11,13 +11,10 @@
 </c:if>
 
 
-
 <%-- Общая декоративная "шапка" для всех страниц --%>
 <div style="background-color: #a0c8ff; padding: 10px; ">
 
 
-	<img src="/resources/ad.png" width="50" height="53" border="0"
-		 align="left">
 
 	<div style="font-family: 'Trebuchet'; font-size: 30px; height: 53px;
 margin-left: 80px;">
@@ -27,14 +24,16 @@ margin-left: 80px;">
 <%-- Панель отображается если пользователь аутентифицирован --%>
 <c:if test="${sessionScope.authUser!=null}">
 	<div style="background-color: #ccc; padding: 5px">
+
 		<div style="float: right; margin-right: 5px">
-			[ <a href="<c:url value="/index.jsp" />">Главная</a> ]
+			 <a href="<c:url value="/index.jsp" />">Главная</a>
 		</div>
 		<div style="float: right; margin-right: 5px">
-			[ <a href="<c:url value="/cabinet.jsp" />">Кабинет</a> ]
+			 <a href="<c:url value="/cabinet.jsp" />"><img src="/Lab9_C_war_exploded/static/unnamed.png" width="160" height="30" border="0"
+															align="right"></a>
 		</div>
 		<div style="float: right; margin-right: 5px">
-			[ <a href="<c:url value="/doLogout.jsp" />">Выйти</a> ]
+			<a href="<c:url value="/doLogout.jsp" />">Выйти</a>
 		</div>
 		Вы вошли как:
 		<c:out value="${sessionScope.authUser.name}" />
