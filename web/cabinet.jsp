@@ -34,5 +34,12 @@
 </my:layout1Column>
 <%-- Вставить нижний заголовок страницы --%>
 <%@ include file="/static/footer.jsp" %>
+<style>
+	body {
+		background: url(images/1.jpg) no-repeat;
+
+		background-size: 100%; /* Современные браузеры */
+	}
+</style>
 </body>
 </html>

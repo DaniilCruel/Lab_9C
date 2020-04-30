@@ -9,18 +9,16 @@
 <c:if test="${param.dir!=null}">
 	<c:set var="dir" scope="session" value="${param.dir}"/>
 </c:if>
+
+
+
 <%-- Общая декоративная "шапка" для всех страниц --%>
 <div style="background-color: #a0c8ff; padding: 10px; ">
 
-<style>
-body {
-background: url(images/1.jpg) no-repeat;
 
-background-size: 100%; /* Современные браузеры */
-}
-</style>
-	<img src="/ad/resources/ad.png" width="50" height="53" border="0"
+	<img src="/resources/ad.png" width="50" height="53" border="0"
 		 align="left">
+
 	<div style="font-family: 'Trebuchet'; font-size: 30px; height: 53px;
 margin-left: 80px;">
 		Доска объявлений "Фиговый листок" v.1.0.0
