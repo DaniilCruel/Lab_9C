@@ -36,7 +36,7 @@
 <%@ include file="/static/footer.jsp" %>
 <style>
 	body {
-		background: url(images/1.jpg) no-repeat;
+		background: url(images/P.jpg) no-repeat;
 
 		background-size: 100%; /* Современные браузеры */
 	}

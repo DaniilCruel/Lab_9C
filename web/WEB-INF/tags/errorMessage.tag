@@ -5,7 +5,7 @@
 <c:if test="${sessionScope.errorMessage!=null}">
 	<%-- Если да, то показать его --%>
 	<div style="padding: 10px;">
-<span style="background-color: yellow;">
+<span style="background-color: red;">
 <c:out value="${sessionScope.errorMessage}" />
 </span>
 	</div>
